@@ -5,7 +5,7 @@ function Todo(props) {
 
     const [task, setTask] = useState(props.task)
     function deleteTodo(e) {
-        axios.delete(`http://localhost:5000/todos/${props._id}`)
+        axios.delete(`https://cb-mern-tutorial.glitch.me/todos/${props._id}`)
         .then(res => {
             console.log(res.data)
             e.target.parentElement.remove()
@@ -18,7 +18,7 @@ function Todo(props) {
     function editTodo() {
         const newTask = document.getElementById(props._id).value
         setTask(newTask)
-        axios.put(`http://localhost:5000/todos/${props._id}`, {task: newTask})
+        axios.put(`https://cb-mern-tutorial.glitch.me/todos/${props._id}`, {task: newTask})
         .then(res => {
             console.log(res.data)
         })

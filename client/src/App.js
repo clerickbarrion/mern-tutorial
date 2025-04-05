@@ -7,7 +7,7 @@ const App = () => {
   const [todos, setTodos] = useState([]);
   useEffect(() => {
     // Fetch data from the Express server
-    axios.get('http://localhost:5000/todos')
+    axios.get('https://cb-mern-tutorial.glitch.me/todos')
       .then(response => setTodos(response.data))
       .catch(error => console.error(error));
   }, []);

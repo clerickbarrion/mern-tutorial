@@ -4,7 +4,7 @@ const TodoForm = ({ onAdd }) => {
   const [task, setTask] = useState('');
   const addTodo = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/todos', { task });
+      const response = await axios.post('https://cb-mern-tutorial.glitch.me/todos', { task });
       onAdd(response.data);
       setTask('');
     } catch (error) {
